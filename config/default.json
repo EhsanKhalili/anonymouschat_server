@@ -1,0 +1,6 @@
+{
+  "jwtAccessTokenPrivateKey": "mySecurejwtAccessTokenPrivateKey",
+  "jwtRefreshTokenPrivateKey": "mySecurejwtRefreshTokenPrivateKey",
+  "jwtVeriyPhoneNumberPrivateKey": "mySecurejwtVeriyPhoneNumberPrivateKey",
+  "PORT" : 3000
+}

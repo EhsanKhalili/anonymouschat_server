@@ -1,0 +1,6 @@
+{
+  "jwtAccessTokenPrivateKey": "anonymouschat_mySecurejwtAccessTokenPrivateKey",
+  "jwtRefreshTokenPrivateKey": "anonymouschat_mySecurejwtRefreshTokenPrivateKey",
+  "jwtVeriyPhoneNumberPrivateKey": "anonymouschat_mySecurejwtVeriyPhoneNumberPrivateKey",
+  "PORT" : "PORT"
+}
