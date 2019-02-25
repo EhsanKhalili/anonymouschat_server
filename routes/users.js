@@ -86,6 +86,8 @@ router.post('/login', async (req, res) => {
    user.lastLoginTime = Date.now();
    user.lastLoginIp = req.ip;
 
+   user.deviceInformation = req.body.deviceInformation;
+
    await user.save();
 
    res.header('x-auth-accesstoken', accesstoken)

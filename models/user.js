@@ -4,6 +4,12 @@ const Joi = require('joi');
 const mongoose = require('mongoose');
 
 const userSchema = new mongoose.Schema({
+   userName: {
+      type: String,
+      minlength: 6,
+      maxlength: 20,
+      unique: true
+   },
    phoneNumber: {
       type: String,
       required: true,
@@ -32,6 +38,18 @@ const userSchema = new mongoose.Schema({
    smsVerificationCode: String,
    smsVerificationCodeCreationTime: Date,
    refreshToken: String,
+   deviceInformation: {
+      manufacturer: String,
+      brand: String,
+      phoneNumber: String,
+      model: String,
+      systemName: String,
+      systemVersion: String,
+      uniqueID: String,
+      serialNumber: String,
+      userAgent: String,
+      applicationVersion: String,
+   },
    roles: [
       {
          type: String
@@ -102,7 +120,8 @@ const validateUserLogin = userLoginObject => {
       smsVerificationCode: Joi.string()
          .required()
          .min(6)
-         .max(6)
+         .max(6),
+      deviceInformation: Joi.object().required()
    };
 
    return Joi.validate(userLoginObject, schema);
